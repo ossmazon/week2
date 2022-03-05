@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  min-height: 100vh;
+  background-color: #6b705c;
+  font-family: "roboto", sans-serif;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  min-width: 320px;
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+.header {
+  background-color: #ffe8d6;
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 100px 1fr;
+  grid-template-areas: "header-logo header-icons";
+  align-items: center;
+  gap: 20px;
+  justify-items: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.header-icons {
+  justify-self: end;
+  grid-area: header-icons;
+  padding-right: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  justify-content: end;
+  gap: 20px;
+  justify-items: center;
+}
+.facebook-icon {
+  display: inline;
+  background-image: url("../assets/icons/svg/001-facebook.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.facebook-icon:hover {
+  filter: invert(100%);
+}
+.instagram-icon:hover {
+  filter: invert(100%);
+}
+.twitter-icon:hover {
+  filter: invert(100%);
+}
+.linkedin-icon:hover {
+  filter: invert(100%);
+}
+.git-github-icon:hover {
+  filter: invert(100%);
+}
+.twitter-icon {
+  display: inline;
+  background-image: url("../assets/icons/svg/002-twitter.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.instagram-icon {
+  display: inline;
+  background-image: url("../assets/icons/svg/011-instagram.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.linkedin-icon {
+  display: inline;
+  background-image: url("../assets/icons/svg/010-linkedin.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+.git-github-icon {
+  display: inline;
+  background-image: url("../assets/icons/github.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.header-logo {
+  grid-area: header-logo;
+  display: flex;
+  background-image: url("/assets/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "cakes"
+    "topics"
+    "contact";
+
+  padding: 0 200px 0;
+}
+
+.cakes {
+  grid-area: cakes;
+  background-color: #a5a58d;
+  padding-top: 20px;
+  display: grid;
+  grid-template-areas:
+    "title      title       title"
+    "vanilla    chocolate   mix";
+
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  padding: 0 100px 25px;
+  text-align: center;
+}
+.cakes .title {
+  font-weight: bold;
+  padding-bottom: 20px;
+  grid-area: title;
+  padding-top: 20px;
+  font-size: x-large;
+}
+.vanilla,
+.chocolate,
+.mix {
+  font-weight: 300;
+}
+.cakes img {
+  margin-bottom: 10px;
+  box-shadow: 10px 10px 10px 1px #6b705c;
+}
+
+.vanilla img {
+  width: 200px;
+  height: 200px;
+}
+.chocolate img {
+  width: 200px;
+  height: 200px;
+}
+.mix img {
+  width: 200px;
+  height: 200px;
+}
+.topics {
+  grid-area: topics;
+  background-color: #b7b7a4;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "title-topics      topics-container "
+    "title-topics      topics-container ";
+
+  align-items: center;
+  justify-items: start;
+
+  padding-top: 25px;
+}
+.title-topics {
+  font-weight: bold;
+
+  justify-self: end;
+  font-size: large;
+}
+.topics-container div {
+  padding: 2px;
+}
+.contact {
+  background-color: #a5a58d;
+  padding-top: 20px;
+  display: grid;
+  grid-area: contact;
+  grid-template-areas:
+    "contact-title"
+    "form-container"
+    "submit-container";
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 50px;
+}
+.contact-title {
+  justify-self: center;
+  font-weight: bold;
+  font-size: larger;
+}
+.form-container {
+  text-align: center;
+  font-weight: lighter;
+}
+.submit-container {
+  background-color: #ddbea9;
+
+  height: 50px;
+  width: 100px;
+  justify-self: center;
+  box-shadow: 10px 10px 10px 1px #6b705c;
+  font-weight: lighter;
+}
+
+.special {
+  height: 100px;
+}
+
+.footer {
+  background-color: #cb997e;
+  height: 200px;
+  grid-area: footer;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color: #ffff;
+  font-weight: bold;
+}
+.map {
+  width: 300px;
+  height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .cakes {
+    grid-template-areas:
+      "title"
+      "vanilla"   
+     " chocolate"   
+     "mix";
+  }
+
+  .topics {
+    
+    justify-content: center;
+    grid-template-areas:
+      "title-topics"      
+      "topics-container ";
+  
+    
+  }
+  
+  .header {
+    
+    gap: 0px;
+    
+    padding-left: 200px;
+    padding-right: 200px;
+    
+    
+  }
+
+  
+}
